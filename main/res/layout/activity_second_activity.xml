@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/c"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".Activitys.second_activity">
+
+    <Spinner
+        android:id="@+id/spinner2"
+        android:layout_width="308dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="104dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/spinner_style"
+        android:dropDownSelector="#00BCD4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.484"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etDescripcion"
+        android:layout_width="308dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/spinner_style"
+        android:ems="10"
+        android:hint="Descripcion"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textColorHint="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner2" />
+        <requestFocus/>
+
+    <EditText
+        android:id="@+id/etDate"
+        android:layout_width="245dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/spinner_style"
+        android:ems="10"
+        android:hint="Fecha"
+        android:inputType="date"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textColorHint="#000000"
+        app:layout_constraintEnd_toEndOf="@+id/etDescripcion"
+        app:layout_constraintHorizontal_bias="0.04"
+        app:layout_constraintStart_toStartOf="@+id/etDescripcion"
+        app:layout_constraintTop_toBottomOf="@+id/etDescripcion" />
+
+    <EditText
+        android:id="@+id/etHora"
+        android:layout_width="245dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/spinner_style"
+        android:ems="10"
+        android:hint="Hora"
+        android:inputType="time"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textColorHint="#000000"
+        app:layout_constraintEnd_toEndOf="@+id/etDescripcion"
+        app:layout_constraintHorizontal_bias="0.04"
+        app:layout_constraintStart_toStartOf="@+id/etDescripcion"
+        app:layout_constraintTop_toBottomOf="@+id/etDate" />
+
+    <Button
+        android:id="@+id/btnDone"
+        android:layout_width="110dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="84dp"
+        android:background="@drawable/button_style"
+        android:onClick="Registrar"
+        android:text="guardar"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnDiscard"
+        app:layout_constraintTop_toBottomOf="@+id/cbHecho" />
+
+    <Button
+        android:id="@+id/btnDiscard"
+        android:layout_width="110dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/button_style"
+        android:text="cancelar"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toStartOf="@+id/btnDone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cbHecho" />
+
+    <CheckBox
+        android:id="@+id/cbHecho"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="54dp"
+        android:layout_marginTop="74dp"
+        android:buttonTint="#3CEE0A"
+        android:contextClickable="false"
+        android:text="Realizado"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etHora" />
+
+    <ImageButton
+        android:id="@+id/btnDate"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="35dp"
+        android:background="@drawable/button_style"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/etDate"
+        app:layout_constraintTop_toBottomOf="@+id/etDescripcion"
+        app:srcCompat="@android:drawable/ic_menu_my_calendar" />
+
+    <ImageButton
+        android:id="@+id/btnHora"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="26dp"
+        android:background="@drawable/button_style"
+        app:layout_constraintEnd_toEndOf="@+id/btnDate"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/btnDate"
+        app:layout_constraintTop_toBottomOf="@+id/btnDate"
+        app:srcCompat="@android:drawable/ic_menu_recent_history" />
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:background="@drawable/wave3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

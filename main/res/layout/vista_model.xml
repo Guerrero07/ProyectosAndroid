@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+            android:id="@+id/Linearl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textViewID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:text="Categoria:"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/tvCat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:text="home"
+                android:textColor="#000000"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/textViewHo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:text="Hora:"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/tvHora"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:text="10:20"
+                android:textColor="#000000"
+                android:textSize="18dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textViewDe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:text="Descripcion:"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/tvDescripcion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:text="datos"
+                android:textColor="#000000"
+                android:textSize="18dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textViewFe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:text="Fecha:"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/tvFecha"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:text="20/12/2020"
+                android:textColor="#000000"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/textViewE"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="1"
+                android:textColor="#00FFFFFF"
+                android:textSize="18dp" />
+        </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/Color"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#67E94A" />
+
+    </LinearLayout>
+        <LinearLayout
+            android:id="@+id/Linear2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#67E94A"
+            android:orientation="horizontal">
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="218dp"
+                android:layout_height="38dp"
+                android:layout_marginStart="12dp"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <RadioButton
+                    android:id="@+id/rb1"
+                    android:layout_width="108dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/radio_button_style"
+                    android:buttonTint="#030303"
+                    android:text="Pendiente"></RadioButton>
+
+
+                <RadioButton
+                    android:id="@+id/rb2"
+                    android:layout_width="107dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="2dp"
+                    android:background="@drawable/radio_button_style"
+                    android:buttonTint="#050505"
+                    android:text="Realizado"></RadioButton>
+            </RadioGroup>
+
+            <ImageButton
+                android:id="@+id/btnEliminar"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="77dp"
+                android:background="#00FFFFFF"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/btnEditar"
+                app:layout_constraintStart_toEndOf="@+id/radioGroup"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_delete_forever" />
+
+            <ImageButton
+                android:id="@+id/btnEditar"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_marginEnd="6dp"
+                android:background="#00FFFFFF"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_flecha_hacia_derecha" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:textColor="#000000"
+        android:textSize="18dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="18dp"
+        android:layout_marginTop="0dp" />
+
+</RelativeLayout>

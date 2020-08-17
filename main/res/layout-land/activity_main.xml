@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".Activitys.MainActivity">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvListaC"
+        android:layout_width="410dp"
+        android:layout_height="0dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="7dp"
+        android:background="#ffffff"
+        android:scrollbarTrackVertical="@android:drawable/ic_input_add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/spinner1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Spinner
+        android:id="@+id/spinner1"
+        android:layout_width="345dp"
+        android:layout_height="52dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/spinner_style"
+        android:dropDownSelector="#ffffff"
+        android:popupBackground="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/rvListaC"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnAgregar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="36dp"
+        android:background="#2B2B2B"
+        android:backgroundTint="#08F00C"
+        android:clickable="true"
+        android:foregroundGravity="bottom|right"
+        android:hapticFeedbackEnabled="false"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.938"
+        app:layout_constraintStart_toEndOf="@+id/rvListaC"
+        app:srcCompat="@drawable/icon" />
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_above="@+id/rvListaC"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/wave"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/rvListaC" />
+
+    <ImageButton
+        android:id="@+id/btnEliminar"
+        android:layout_width="43dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="12dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintBottom_toTopOf="@+id/view1"
+        app:layout_constraintStart_toEndOf="@+id/rvListaC"
+        app:srcCompat="@android:drawable/ic_menu_delete" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
